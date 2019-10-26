@@ -1,0 +1,86 @@
+<!-- Written by Mario L. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Singapore Traffic Data</title>
+  </head>
+  <body onload="run()">
+
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Singapore Traffic Images</span>
+    </nav>
+
+    <form class="w-50 mx-auto mb-10" id="form" action="javascript: submitForm()"> 
+        <div class="form-group">
+          <label for="url">Data URL</label>
+          <input type="text" class="form-control" id="url" name="url" placeholder="Enter data url" value="https://api.data.gov.sg/v1/transport/traffic-images" readonly="readonly">
+        </div>
+
+        <label for="pages">Number of results per page</label>
+        <select class="form-control" id="pages" name="pages">
+          <option>5</option>
+          <option>10</option>
+          <option>15</option>
+        </select>
+        <label for="boxes">Number of pagination boxes per segment</label>
+        <select class="form-control" id="boxes" name="pages">
+          <option>5</option>
+          <option>10</option>
+          <option>15</option>
+        </select>
+
+        <br>
+        <button type="submit" class="btn btn-dark" style="float: right !important">Submit</button>
+      </form>
+      <br>
+
+      
+      <div class="nav-scroller py-1 mb-2 mt-5" id="nav"> 
+          <nav class="nav d-flex justify-content-center"> 
+            <ul class="pagination pagination-sm flex-wrap" id="pagination"> 
+
+                  
+              <!-- Page Boxes goes here -->
+            </ul>
+           </nav> 
+         
+        </ul>
+      </div>
+
+      <br>
+      <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="row" id="imageholder">
+         
+         <!-- Data goes here -->
+
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="footer py-3 bg-transparent">
+          <div class="container color">
+            <span class="text-muted text-center mx-auto" id="year">&#9400;</span>
+          </div>
+        </footer>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="Paginize.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
