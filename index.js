@@ -4,7 +4,6 @@ function run(){
     var n = d.getFullYear();
     $("#year").append(n + '&nbsp;M.L');
 }
-
 function submitForm(){
     var form = $("#form").serializeArray()
     var url = form[0].value;
